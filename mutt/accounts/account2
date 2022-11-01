@@ -1,0 +1,18 @@
+set folder = "imaps://user@telefonica.net@imap.telefonica.net:993"
+set imap_pass = "`pass user@telefonica.net`"
+set sendmail = "msmtp -a user@telefonica.net"
+
+set ssl_force_tls = yes
+
+
+set spoolfile = "+INBOX"
+set record = "+/Enviados"
+set trash = "+/Trash"
+set postponed = "+/Borrador"
+
+set ssl_force_tls = yes
+
+mailboxes =INBOX =Enviados =Trash =Borradores
+
+set from = "user@telefonica.net"
+set realname = "user Manu"

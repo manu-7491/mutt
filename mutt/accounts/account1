@@ -1,0 +1,24 @@
+set folder = "imaps://user@gmail.com@imap.gmail.com:993"
+set imap_pass = "`pass gmail`"
+set sendmail = "msmtp -a user@telefonica.net"
+set imap_user = 'user@gmail.com'
+
+set ssl_force_tls = yes
+
+set spoolfile = "+INBOX"
+set record = "+/Enviados"
+set trash = "+/Trash"
+set postponed = "+/Borradores"
+
+mailboxes =INBOX =Enviados =Trash =Borradores
+
+set from = "user@gmail.com"
+set realname = "user Manu"
+
+
+set spoolfile=imaps://imap.gmail.com/INBOX 
+set record="imaps://imap.gmail.com/[Gmail]/Sent Mail"  
+set trash="imaps://imap.gmail.com/[Gmail]/Trash"
+
+auto_view text/htmll
+

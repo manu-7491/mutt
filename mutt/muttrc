@@ -1,0 +1,35 @@
+source ~/.config/mutt/accounts/account1
+folder-hook 'account1' 'source ~/.config/mutt/accounts/account1'
+source ~/.config/mutt/accounts/account2
+folder-hook 'account2' 'source ~/.config/mutt/accounts/account2'
+source ~/.config/mutt/accounts/account3
+folder-hook 'account3' 'source ~/.config/mutt/accounts/account3'
+
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account1<enter><change-folder>!<enter>'
+macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account2<enter><change-folder>!<enter>'
+macro index,pager <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/account3<enter><change-folder>!<enter>'
+:
+
+
+source ~/.config/mutt/colors
+
+set sendmail = "msmtp -a user@telefonica.net"
+
+set sort = reverse-date-received
+
+color hdrdefault color88 default 
+color quoted red default
+color signature red default
+color indicator brightyellow color9
+color error brightred default
+color status yellow color94
+color tree color232 default
+color tilde magenta default
+color message brightcyan default
+color markers brightcyan default
+color attachment white default
+color search yellow blue
+# Editor
+set editor = "nano"
+auto_view text/html text/calendar application/ics # view html automatically
+alternative_order text/html text/plain text/enriched text/*
